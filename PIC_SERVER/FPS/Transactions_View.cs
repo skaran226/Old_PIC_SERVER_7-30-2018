@@ -33,9 +33,9 @@ namespace FPS
             process.Elapsed += new System.Timers.ElapsedEventHandler(UpdateTrans);
             process.Start();
 
-            //create_tran.Visible = false;
-            //Authorize.Visible = false;
-            //complet.Visible = false;
+            create_tran.Visible = false;
+            Authorize.Visible = false;
+            complet.Visible = false;
 
         }
 
