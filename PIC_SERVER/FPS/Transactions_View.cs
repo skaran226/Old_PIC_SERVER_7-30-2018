@@ -926,12 +926,35 @@ namespace FPS
                 }
 
                 if(iPage==1){
-                    ButtonVisibility(previous_btn, true);
+                    ButtonVisibility(previous_btn, false);
                 }
 
             }
             else {
-                Display.ShowMessageBox("Not Available Selected date Transations \n Showing All Available Transactions", 6);
+                Display.ShowMessageBox("Not Available Selected date Transations", 4);
+                DB.lCompletedTrans.Clear();
+                ClearButtonTexts();
+                ClearSelection();
+                ClearTransactionsDetails();
+                iPage = 1;
+
+                if (DB.lCompletedTrans.Count <= 6 * iPage)
+                {
+
+                    ButtonVisibility(next_btn, false);
+                }
+                if (DB.lCompletedTrans.Count >= 6 * iPage)
+                {
+
+                    ButtonVisibility(next_btn, true);
+                }
+
+                if (iPage == 1)
+                {
+                    ButtonVisibility(previous_btn, false);
+                }
+
+
             }
             dbCmd.Dispose();
             drRecordSet.Dispose();
