@@ -779,52 +779,49 @@ namespace FPS
 
        private string getMonth(string month){
            string ret_month = "";
-           if (month == "01") {
-               ret_month = "Jan";
-           }
-
-           if (month == "01")
+           if (month == "01" || month == "1")
            {
                ret_month = "Jan";
            }
 
-           if (month == "02")
+
+           if (month == "02" || month == "2")
            {
                ret_month = "Feb";
            }
 
-           if (month == "03")
+           if (month == "03" || month == "3")
            {
                ret_month = "March";
            }
 
-           if (month == "04")
+           if (month == "04" || month == "4")
            {
                ret_month = "Apirl";
 
            }
 
-           if (month == "05")
+           if (month == "05" || month == "5")
            {
                ret_month = "May";
            }
 
-           if (month == "06")
+           if (month == "06" || month == "6")
            {
                ret_month = "June";
            }
 
-           if (month == "07")
+           if (month == "07" || month == "7")
            {
                ret_month = "July";
            }
 
-           if (month == "08")
+           if (month == "08" || month == "8")
            {
                ret_month = "Aug";
            }
 
-           if (month == "09")
+           if (month == "09" || month == "9")
            {
                ret_month = "Sep";
            }
