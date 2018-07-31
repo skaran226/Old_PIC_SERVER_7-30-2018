@@ -167,7 +167,7 @@ namespace FPS
             day_inc_dec--;
             if (day_inc_dec <= 9)
             {
-                day_lbl.Text = "0" + day_inc_dec.ToString();
+                day_lbl.Text =  day_inc_dec.ToString();
             }
             else {
                 day_lbl.Text = day_inc_dec.ToString();
@@ -249,7 +249,7 @@ namespace FPS
 
             GetChooseTransations(date_formate);
 
-            GetChooseTransations(date_formate);
+            //GetChooseTransations(date_formate);
             //MessageBox.Show(date_formate + "");
 
         }
@@ -707,7 +707,7 @@ namespace FPS
             if (month == "Jan") {
 
                 //ButtonVisibility(previous_month, false);
-                monthNum = 01;
+                monthNum = 1;
                 
             }
 
@@ -716,41 +716,41 @@ namespace FPS
             }*/
 
             if (month == "Feb") {
-                monthNum = 02;
+                monthNum = 2;
             }
 
             if (month == "March")
             {
-                monthNum = 03;
+                monthNum = 3;
             }
 
             if (month == "Apirl")
             {
-                monthNum = 04;
+                monthNum = 4;
             }
 
             if (month == "May")
             {
-                monthNum = 05;
+                monthNum = 5;
             }
 
             if (month == "June")
             {
-                monthNum = 06;
+                monthNum = 6;
             }
 
             if (month == "July")
             {
-                monthNum = 07;
+                monthNum = 7;
             }
 
             if (month == "Aug") {
-                monthNum = 08;
+                monthNum = 8;
             }
 
             if (month == "Sep")
             {
-                monthNum = 09;
+                monthNum = 9;
             }
 
             if (month == "Oct")
