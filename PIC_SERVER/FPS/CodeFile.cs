@@ -3947,7 +3947,7 @@ namespace FPS
             TRAN TRAN_Obj;
 
             TRAN_Obj = new TRAN(TRANs.Count, iPassPicNum, iPassPumpNum, sPassTime, sPassID);
-            TRANs.Add(TRAN_Obj);
+            //TRANs.Add(TRAN_Obj);
 
             //DB.CreateTransaction(sID, sTime, iPicNum, iPumpNum);
         }
@@ -4181,6 +4181,8 @@ namespace FPS
             this.bAuthorized = false;
             this.bCompleted = false;
             this.bChange = false;
+
+            //TRAN_MGR.TRANs.Add(this);
             //sAuthorizedTime = "";
             //sCompletedTime = "";
 
@@ -4234,11 +4236,15 @@ namespace FPS
             dPurchased = Convert.ToDouble(sPurchased);
             sPrice = Convert.ToString(dPrice);
             sChange = String.Format("{0:0.00}", iDeposited - dPurchased);
+
+            
+            
             //if (Convert.ToInt16(iDeposited - dPurchased) != 0)
             if (sChange != "0.00")
             {
                 this.bChange = true;
             }
+            TRAN_MGR.TRANs.Add(this);
             Debug.WriteLine("CHANGE = " + sChange + " - " + bChange + " - " + Convert.ToInt16(iDeposited - dPurchased));
             Debug.WriteLine(bChange);
             Debug.WriteLine(Convert.ToInt16(iDeposited - dPurchased));
@@ -4313,7 +4319,7 @@ namespace FPS
                 Printer.sReceipt = sReceipt;
                 CenCom.bPrintRequest = true;
 
-                DB.CompleteTransaction(sTranId, sPurchased, sPrice, sVolume, sGrade, sChange, sCompletedTime, sShowTime);
+                DB.CompleteTransaction(TRAN_MGR.TRANs[Display.iButtonSelected - 1].sTranId, TRAN_MGR.TRANs[Display.iButtonSelected - 1].sPurchased, TRAN_MGR.TRANs[Display.iButtonSelected - 1].sPrice, TRAN_MGR.TRANs[Display.iButtonSelected - 1].sVolume, TRAN_MGR.TRANs[Display.iButtonSelected - 1].sGrade, TRAN_MGR.TRANs[Display.iButtonSelected - 1].sChange, TRAN_MGR.TRANs[Display.iButtonSelected - 1].sCompletedTime, TRAN_MGR.TRANs[Display.iButtonSelected - 1].sShowTime);
 
                 System.Threading.Timer timer = null;
                 timer = new System.Threading.Timer((obj) =>

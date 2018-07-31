@@ -307,6 +307,7 @@ namespace FPS
                     if (Display.lColors[Display.iButtonSelected - 1] == Color.Orange)
                     {
                         TRAN_MGR.TRANs[Display.iButtonSelected - 1].Print();
+                        //TRAN.CompletedTRANs[Display.iButtonSelected - 1].Print();
                     }
                 }
                 else if (Display.iView == 2)
@@ -791,15 +792,20 @@ namespace FPS
           Config_AutoEOD();
          // new TRAN(1, 2, 3, "1238765", "11").Authorize("1238765", 40);
 
-          /* TRAN_MGR.Create(1,2,"12352563423","123498");
-            TRAN t1 = new TRAN(0, 1, 2, "12352563423", "123498");
+         /*   TRAN_MGR.Create(2,2,"12352563423","1234013");
+            TRAN t1 = new TRAN(0, 2, 2, "12352563423", "1234013");
            t1.Authorize("12352563423", 60);
            t1.SalesReport("1", "14", "40", "20");
-           //t1.Print();
-           TRAN_MGR.Create(2, 3, "12352563423", "123499");
-           TRAN t2 = new TRAN(1, 2, 3, "12352563423", "123499");
+
+           TRAN_MGR.Create(3, 3, "12352563423", "1234014");
+           TRAN t2 = new TRAN(1, 3, 3, "12352563423", "1234014");
            t2.Authorize("12352563423", 60);
-           t2.SalesReport("2", "14", "40", "20");
+           t2.SalesReport("1", "14", "40", "20");*/
+
+
+           
+           //t1.Print();
+           
            //t1.Print();
            //Display.UpdateButtonList();*/
             
